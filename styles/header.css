@@ -1,0 +1,46 @@
+header {
+    height: 6.72rem;
+    width: calc(100% - 8.27rem - 8.27rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8.27rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(19, 20, 25, 1);
+    z-index: 9;
+  }
+  .header-left-elements {
+    display: flex;
+    align-items: center;
+  }
+  .header-logo {
+    margin-right: 0.72rem;
+    width: 2.9rem;
+  }
+  .header-company-name {
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 2.27rem;
+    color: #fff;
+  }
+  .header-right-elements {
+    display: flex;
+    align-items: center;
+  }
+  .header-right-elements > li {
+    list-style: none;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 1.27rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 3.81rem;
+  }
+  .signin-icon {
+    margin-right: 0.9rem;
+  }
+  
