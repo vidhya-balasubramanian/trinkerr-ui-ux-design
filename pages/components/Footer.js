@@ -1,15 +1,16 @@
-import React from "react";
+import Image from "next/image";
 
 import Logo from "../../assets/logo.svg";
 import Twitter from "../../assets/twitter.svg";
 import Youtube from "../../assets/youtube.svg";
 
-
 const Footer = () => {
   return (
     <footer>
       <div className="footer-title-elem">
-        <img src={Logo} alt="" />
+        <div className="img-wrapper" style={{marginRight: '0.72rem'}}>
+          <Image src={Logo} alt="" />
+        </div>
         <p className="footer-company-title">Trinkerr</p>
       </div>
       <div className="footer-content-elem">
@@ -56,16 +57,21 @@ const Footer = () => {
         </div>
         <ul className="footer-ul-elements">
           <li>Social</li>
-          <li>
-            <a href="https://twitter.com/Trinkerr_IN" target="_blank" rel="noopener noreferrer">
-              <img src={Twitter} alt="" style={{ marginRight: 10 }} />
+          <li >
+            <a
+              href="https://twitter.com/Trinkerr_IN"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginRight: 10 }}
+            >
+              <Image src={Twitter} alt="" />
             </a>
             <a
               href="https://www.youtube.com/channel/UCsM_3XZEEQpNSk3Vk3OjQJw"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={Youtube} alt="" />
+              <Image src={Youtube} alt="" />
             </a>
           </li>
         </ul>

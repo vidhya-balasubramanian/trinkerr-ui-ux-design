@@ -1,14 +1,16 @@
-import React from "react";
+import Image from "next/image";
 
 import Logo from "../../assets/logo.svg";
 import SigninIcon from "../../assets/signin.svg";
-
 
 const Header = () => {
   return (
     <header>
       <div className="header-left-elements">
-        <img src={Logo} alt="" className="header-logo" />
+        <div className="header-logo img-wrapper">
+          <Image src={Logo} alt="" />
+        </div>
+
         <p className="header-company-name">Trinkerr</p>
       </div>
       <ul className="header-right-elements">
@@ -22,7 +24,9 @@ const Header = () => {
             target="_blank"
             style={{ color: "inherit", textDecoration: "none" }}
           >
-            <img src={SigninIcon} alt="" className="signin-icon" />
+            <div className="signin-icon img-wrapper">
+              <Image src={SigninIcon} alt="" />
+            </div>
             <p>Sign in</p>
           </a>
         </li>

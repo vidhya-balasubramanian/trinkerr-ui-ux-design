@@ -56,6 +56,12 @@ html {
     font-size: 68.5%;
   }
 }
+.mr30 {
+  margin-right: 30px;
+}
+.img-wrapper > div {
+  vertical-align: middle;
+}
 
 /* footer  */
 footer {
@@ -67,9 +73,6 @@ footer {
   display: flex;
   align-items: center;
   margin-bottom: 4.27rem;
-}
-.footer-title-elem > img {
-  margin-right: 0.72rem;
 }
 .footer-company-title {
   font-family: Inter;
