@@ -1,16 +1,272 @@
-html,
-body {
-  padding: 0;
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  outline: none;
+  padding: 0;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+.flex-container1 {
+  display: flex;
+  align-items: center;
+}
+html {
+  font-size: 62.5%;
+  /* 1 rem = 10px; 10px/16px = 62.5% */
+}
+@media all and (max-width: 1440px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media all and (max-width: 992px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media all and (max-width: 600px) {
+  html {
+    font-size: 38%;
+  }
+}
+@media all and (min-width: 1440px) and (min-height: 1200px) {
+  html {
+    font-size: 68.5%;
+  }
 }
 
-* {
+/* footer  */
+footer {
+  background-color: #131419;
+  width: calc(100% - 7.81rem - 8.27rem);
+  padding: 7.3rem 7.81rem 12.5rem 8.27rem;
+}
+.footer-title-elem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4.27rem;
+}
+.footer-title-elem > img {
+  margin-right: 0.72rem;
+}
+.footer-company-title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.9rem;
+  line-height: 2.27rem;
+  letter-spacing: -0.04em;
+  color: #d9d9d9;
+}
+.footer-content-elem {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-content-elem-left {
+  display: flex;
+}
+.footer-ul-elements {
+  margin-right: 7.36rem;
+}
+.footer-ul-elements > li:first-child {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1.81rem;
+  line-height: 2.18rem;
+  letter-spacing: -0.004em;
+  color: #d9d9d9;
+  margin-bottom: 1.45rem;
+}
+.footer-ul-elements > li:not(:first-child) {
+  font-family: Inter;
+  font-size: 1.81rem;
+  line-height: 2.18rem;
+  letter-spacing: -0.004em;
+  color: #d9d9d9;
+  margin-bottom: 0.72rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-content-elem {
+    flex-direction: column;
+  }
+  .footer-content-elem-left {
+    margin-bottom: 30px;
+  }
+}
+
+/* header  */
+header {
+  height: 6.72rem;
+  width: calc(100% - 8.27rem - 8.27rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8.27rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(19, 20, 25, 1);
+  z-index: 9;
+}
+.header-left-elements {
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  margin-right: 0.72rem;
+  width: 2.9rem;
+}
+.header-company-name {
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 1.9rem;
+  line-height: 2.27rem;
+  color: #fff;
+}
+.header-right-elements {
+  display: flex;
+  align-items: center;
+}
+.header-right-elements > li {
+  list-style: none;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 1.27rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #ffffff;
+  margin-right: 3.81rem;
+}
+.signin-icon {
+  margin-right: 0.9rem;
+}
+
+/* main content  */
+.main-content-wrapper {
+  padding-left: 8.18rem;
+  padding-top: 22.72rem;
+  padding-bottom: 16rem;
+}
+.main-content-title {
+  font-family: Inter;
+  font-weight: bold;
+  font-size: 2.9rem;
+  line-height: 2.18rem;
+  text-align: left;
+  letter-spacing: -0.14rem;
+  color: #6166dc;
+  margin-bottom: 4.09rem;
+}
+.main-content2 {
+  font-family: Inter;
+  font-weight: 900;
+  font-size: 5.45rem;
+  line-height: 5.81rem;
+  letter-spacing: -0.22rem;
+  color: #2a94dc;
+}
+.main-content3 {
+  font-family: Inter;
+  font-weight: 900;
+  font-size: 5.45rem;
+  line-height: 5.81rem;
+  letter-spacing: -0.22rem;
+  color: #fff;
+  margin-bottom: 4.09rem;
+}
+.main-content-desc {
+  font-family: Inter;
+  font-size: 1.81rem;
+  line-height: 2.9rem;
+  letter-spacing: -0.03rem;
+  color: #d9d9d9;
+  text-align: left;
+  width: 53%;
+}
+.main-content-mobile-number {
+  width: 27.81rem;
+  height: 5.36rem;
+  background: #ffffff;
+  border: 3px solid #333333;
   box-sizing: border-box;
+  border-radius: 8px 0px 0px 8px;
+  font-family: Inter;
+  font-size: 1.81rem;
+  line-height: 2.18rem;
+  letter-spacing: 0.01em;
+  padding-left: 5rem;
+}
+.main-content-get-started-btn {
+  width: 17.27rem;
+  height: 5.36rem;
+  background: #ffffff;
+  box-shadow: inset -3px 0px 0px #333333, inset 0px 3px 0px #333333,
+    inset 0px -3px 0px #333333;
+  border-radius: 0px 8px 8px 0px;
+  outline: none;
+  border: none;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1.81rem;
+  line-height: 2.18rem;
+  letter-spacing: 0.01em;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+}
+.mc-input-btn-wrapper {
+  margin-top: 7.27rem;
+  margin-bottom: 3.63rem;
+}
+.mc-supported-brokers-title {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1.45rem;
+  line-height: 2.9rem;
+  letter-spacing: -0.4px;
+  color: #ffffff;
+  margin-bottom: 0.9rem;
+}
+.mc-input-prefix {
+  font-family: Inter;
+  font-size: 1.81rem;
+  line-height: 2.18rem;
+  letter-spacing: 0.01em;
+  background: #ffffff;
+  position: absolute;
+  top: 1.6rem;
+  left: 1.6rem;
+}
+.page-wrapper {
+  background-image: url("../assets/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media all and (min-height: 1200px) {
+  .page-wrapper {
+    height: 64%;
+  }
 }
