@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Image from "next/image";
 
 import Angel from "../../assets/angel.svg";
@@ -5,6 +6,16 @@ import Fyer from "../../assets/fyer.svg";
 import Zerodha from "../../assets/zerodha.svg";
 
 const MainContent = () => {
+  const [mobileNumber, setMobileNumber] = useState("");
+
+  const onMobileNumberChange = (e) => {
+    const re = /^[0-9\b]+$/;
+    if (e.target.value === ''  || re.test(e.target.value)) {
+      if (e?.target?.value?.length < 11) {
+        setMobileNumber(e.target.value);
+      }
+    }    
+  };
   return (
     <div className="main-content-wrapper">
       <p className="main-content-title">Welcome to the future of investing</p>
@@ -20,7 +31,12 @@ const MainContent = () => {
       <div className="mc-input-btn-wrapper flex-container1">
         <div style={{ position: "relative" }}>
           <span className="mc-input-prefix">+91</span>
-          <input className="main-content-mobile-number" />
+          <input
+            className="main-content-mobile-number"
+            pattern="[1-9]{1}[0-9]{9}"
+            value={mobileNumber}
+            onChange={onMobileNumberChange}
+          />
         </div>
         <button type="button" className="main-content-get-started-btn ">
           Get Started

@@ -71,6 +71,6 @@ html {
 }
 @media all and (min-height: 1200px) {
   .page-wrapper {
-    height: 64%;
+    /* height: 64%; */
   }
 }
